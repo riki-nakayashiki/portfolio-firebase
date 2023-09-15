@@ -1,0 +1,26 @@
+@import './mixins';
+@import './variable';
+@import './navigation';
+@import './about';
+@import './projects';
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.main-contents {
+    @include MakeColumn();
+    align-items: center;
+    background-color: $backgroundColor;
+    padding-left: 10vw;
+    padding-right: 10vw;
+}
+
+.content-line {
+    height: 30vh;
+    width: 0;
+    margin: 3vh;
+    border: 1px solid $fontColor;
+}

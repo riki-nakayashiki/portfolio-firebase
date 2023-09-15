@@ -1,0 +1,87 @@
+// projects
+#projects {
+    @include MakeColumn(5vh);
+    width: 100%;
+
+    .gallery {
+        @include MakeRow;
+        gap: 6vh;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    figure {
+        @include MakeColumn(5vh);
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 35vw;
+        position: relative;
+        overflow-y: hidden;
+        background-color: whitesmoke;
+        border-radius: 10px;
+        transition: .6s;
+
+        &:hover {
+            scale: 1.1;
+        }
+
+        figcaption {
+            overflow-y: hidden;
+            position: absolute;
+            @include MakeColumn(.5vh);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 0%;
+            background-color: rgba($color: white, $alpha: 0.850);
+            z-index: 1;
+            transition: .6s;
+            overflow: scroll;
+        }
+
+        &:hover figcaption {
+            height: 100%;
+        }
+
+        h3 {
+            width: 100%;
+            text-align: center;
+        }
+
+        p {
+            width: 90%;
+            text-align: left;
+            padding: 2%;
+            line-height: 1.5;
+        }
+    }
+
+    img {
+        height: 90%;
+        width: 90%;
+        object-fit: contain;
+        position: absolute;
+    }
+}
+
+@media (max-width: $tabletScreen) {
+    #projects {
+        figure {
+            height: 50vh;
+            width: 90vw;
+
+            figcaption {
+                height: 100%;
+            }
+        }
+    }
+}
+
+// @media (max-width: $mobileScreen) {
+//     #projects {
+//         figure {
+//             height: 50vh;
+//         }
+//     }
+// }
