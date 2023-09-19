@@ -1,12 +1,18 @@
 // NAV 
+.nav-scrolled {
+    transition: 1s;
+    background-color: rgba($color: rgba(58, 62, 133, 0.087), $alpha: .95);
+}
+
 nav {
+    transition: 1s;
     position: fixed;
     z-index: 3;
     width: 94%;
     height: 10vh;
     padding-left: 3%;
     padding-right: 3%;
-    background-color: $backgroundColor;
+    // background-color: $backgroundColor;
     // border-bottom: 1px solid $fontColor;
     @include MakeRow;
     justify-content: space-between;
@@ -16,6 +22,7 @@ nav {
         text-decoration: none;
         color: $fontColor;
         font-size: 20px;
+
         animation: rotateY 5s linear infinite;
 
         @keyframes rotateY {
@@ -50,7 +57,7 @@ nav {
             @include MakeCenter;
             width: 100%;
             height: 80%;
-            font-size: 20px;
+            font-size: 16px;
             font-weight: 600;
             text-decoration: none;
             color: $fontColor;

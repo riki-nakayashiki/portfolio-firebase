@@ -1,0 +1,64 @@
+// Skills
+#skills {
+    @include MakeColumn(5vh);
+    align-items: center;
+    color: $fontColor;
+
+    >section {
+        width: 80%;
+        @include MakeColumn(3vw);
+    }
+
+    .skill-category {
+        @include MakeColumn(3vh);
+
+        .skill-border {
+            @include MakeRow(2vw);
+            align-items: center;
+
+            div {
+                width: 80vw;
+                height: 50%;
+                border-bottom: 1px solid grey;
+            }
+        }
+
+        .skill-elements {
+            @include MakeRow();
+            gap: 2vw;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+    }
+
+    aside {
+        width: 11vh;
+        @include MakeColumn;
+        align-items: center;
+        text-align: center;
+    }
+
+    i {
+        font-size: 9vh;
+        color: $fontColor;
+    }
+
+    // fieldset {
+    //     padding: 3%;
+    //     @include MakeRow(2vw);
+    // }
+
+    // legend {
+    //     font-size: 20px;
+    //     font-weight: 600
+    // }
+}
+
+// @media (max-width: $tabletScreen) {
+//     #skills {
+//         fieldset {
+//             row-gap: 2vw;
+//             flex-wrap: wrap;
+//         }
+//     }
+// }

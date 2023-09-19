@@ -1,0 +1,78 @@
+// Contact
+#contact {
+    @include MakeColumn(8vh);
+    align-items: center;
+    color: $fontColor;
+
+    .send-mail {
+        @include MakeColumn(5vh);
+        align-items: center;
+        width: 80%;
+
+        p {
+            text-align: center;
+            font-size: 1.5vw;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            font-size: 2vw;
+            color: black;
+            background-color: white;
+            box-shadow: 5px 5px grey;
+            padding: 2%;
+            border-radius: 10px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a:active {
+            box-shadow: none;
+            transform: translateY(5px);
+        }
+    }
+
+    span {
+        width: 40%;
+        border: 1px solid grey;
+    }
+
+    .links {
+        @include MakeRow(5vw);
+
+        a {
+            text-decoration: none;
+            @include MakeColumn;
+            align-items: center;
+            text-align: center;
+            color: $fontColorSecond;
+
+            &:hover {
+                scale: 1.1;
+            }
+        }
+
+        i {
+            font-size: 10vh;
+        }
+    }
+}
+
+@media (max-width: $tabletScreen) {
+    #contact {
+        @include MakeColumn(4vh);
+
+        .send-mail {
+            @include MakeColumn(3vh);
+
+            p {
+                font-size: 4vw;
+            }
+
+            a {
+                font-size: 4vw;
+                box-shadow: 3px 3px grey;
+            }
+        }
+    }
+}

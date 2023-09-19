@@ -1,19 +1,12 @@
 import './css/styles.css';
 import NavComponent from './components/NavComponent';
-import AboutComponent from './components/AboutComponent';
-import ProjectsComponent from './components/ProjectsComponent';
+import MainComponent from './components/MainComponent';
 
 function App() {
   return (
     <div className="App">
       <NavComponent />
-      <section className='main-contents'>
-        <div className='content-line'></div>
-        <AboutComponent />
-        <div className='content-line'></div>
-        <ProjectsComponent/>
-        <div className='content-line'></div>
-      </section>
+      <MainComponent />
     </div>
   );
 }

@@ -4,9 +4,46 @@
     // padding-top: 30vh;
     @include MakeColumn(5vh);
     color: $fontColor;
-    // border: 1px solid red;
+
+    .my-name-bg {
+        background-image: url('/src/assets/Logo\ copy.png');
+        // background-size: contain;
+        background-position: center;
+        background-repeat: repeat;
+        background-attachment: fixed;
+
+        .my-name {
+            @include MakeColumn();
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            height: 60vh;
+            background-color: rgba($color: black, $alpha: .9);
+            border-top: 1px solid darkgray;
+            border-bottom: 1px solid darkgray;
+            
+            #txt-rotate>.wrap {
+                font-weight: 600;
+                color: $fontColorSecond;
+                border-right: 0.08em solid #666
+            }
+
+            // /* 方眼紙模様に必須のスタイル */
+            // background-image: linear-gradient(0deg, transparent calc(100% - 1px), grey calc(100% - 1px)),
+            //     linear-gradient(90deg, transparent calc(100% - 1px), grey calc(100% - 1px));
+            // background-size: 20px 20px;
+            // background-repeat: repeat;
+            // background-position: center center;
+
+            /* 以下任意のスタイル */
+            // padding: 20px;
+        }
+    }
+
 
     figure {
+        padding-left: 10vw;
+        padding-right: 10vw;
         @include MakeCenter;
         gap: 5vh;
         font-size: 20px;
@@ -14,7 +51,7 @@
     }
 
     img {
-        width: 20vw;
+        width: 15vw;
         border-radius: 50%;
         transition: .5s ease-out;
         border: 4px solid white;
@@ -27,9 +64,9 @@
     figcaption {
         @include MakeColumn(5vh);
 
-        h1 {
-            font-size: 50px;
-        }
+        // h1 {
+        //     font-size: 50px;
+        // }
     }
 }
 

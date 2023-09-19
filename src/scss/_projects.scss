@@ -3,6 +3,12 @@
     @include MakeColumn(5vh);
     width: 100%;
 
+    h1 {
+        color: $fontColor;
+        text-align: center;
+        // border: 1px solid red;
+    }
+
     .gallery {
         @include MakeRow;
         gap: 6vh;
