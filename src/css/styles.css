@@ -24,19 +24,22 @@ nav .nav-name {
   text-decoration: none;
   color: white;
   font-size: 20px;
+}
+nav .nav-name .title-name {
+  font-family: "Times New Roman", Times, serif;
+  font-weight: 600;
+}
+nav .nav-name span {
+  font-family: "Times New Roman", Times, serif;
+  color: lightpink;
+}
+nav .nav-name-scrolled {
   animation: rotateY 5s linear infinite;
 }
 @keyframes rotateY {
   100% {
     transform: rotateY(360deg);
   }
-}
-nav .nav-name h1 {
-  font-family: "Times New Roman", Times, serif;
-}
-nav .nav-name span {
-  font-family: "Times New Roman", Times, serif;
-  color: pink;
 }
 nav ul {
   display: flex;
@@ -66,7 +69,7 @@ nav li a {
 }
 nav li a:hover {
   scale: 1.2;
-  color: pink;
+  color: lightpink;
 }
 nav .nav-links {
   display: flex;
@@ -75,13 +78,17 @@ nav .nav-links {
   align-items: center;
 }
 nav .nav-links a {
-  color: pink;
+  color: lightpink;
   text-decoration: none;
   font-size: 4vh;
 }
 
+.non-animate {
+  display: none;
+}
+
 .animate {
-  color: rgba(255, 192, 203, 0.3);
+  color: rgba(255, 182, 193, 0.3);
   font-size: 5vh;
   position: absolute;
   animation: ugoki1 20s linear infinite, ugoki2 0.5s ease-in-out infinite alternate-reverse;
@@ -140,7 +147,7 @@ nav .nav-links a {
   color: white;
 }
 #about .my-name-bg {
-  background-image: url("/src/assets/Logo copy.png");
+  background-image: url("/src/assets/Logo.png");
   background-position: center;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -160,7 +167,7 @@ nav .nav-links a {
 }
 #about .my-name-bg .my-name #txt-rotate > .wrap {
   font-weight: 600;
-  color: pink;
+  color: lightpink;
   border-right: 0.08em solid #666;
 }
 #about figure {
@@ -189,10 +196,13 @@ nav .nav-links a {
 }
 
 @media (max-width: 600px) {
+  #about {
+    text-align: center;
+  }
   #about figure {
     display: flex;
     flex-direction: column;
-    row-gap: 0vh;
+    row-gap: 3vh;
   }
   #about figure img {
     width: 50vw;
@@ -222,11 +232,12 @@ nav .nav-links a {
   row-gap: 5vh;
   justify-content: center;
   align-items: center;
-  height: 50vh;
+  height: 60vh;
   width: 35vw;
   position: relative;
   overflow-y: hidden;
-  background-color: whitesmoke;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: 1px solid white;
   border-radius: 10px;
   transition: 0.6s;
 }
@@ -234,19 +245,19 @@ nav .nav-links a {
   scale: 1.1;
 }
 #projects figure figcaption {
+  color: white;
   overflow-y: hidden;
   position: absolute;
   display: flex;
   flex-direction: column;
-  row-gap: 0.5vh;
+  row-gap: 1vh;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 0%;
-  background-color: rgba(255, 255, 255, 0.85);
+  background-color: rgba(0, 0, 85, 0.7);
   z-index: 1;
   transition: 0.6s;
-  overflow: scroll;
 }
 #projects figure:hover figcaption {
   height: 100%;
@@ -255,11 +266,15 @@ nav .nav-links a {
   width: 100%;
   text-align: center;
 }
-#projects figure p {
+#projects figure ul {
   width: 90%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+#projects figure ul li {
+  list-style: square inside;
   text-align: left;
-  padding: 2%;
-  line-height: 1.5;
 }
 #projects img {
   height: 90%;
@@ -343,18 +358,20 @@ nav .nav-links a {
 }
 #contact .send-mail p {
   text-align: center;
-  font-size: 1.5vw;
-  line-height: 1.5;
+  font-weight: 600;
+  font-size: 20px;
 }
 #contact .send-mail a {
   text-decoration: none;
-  font-size: 2vw;
-  color: black;
-  background-color: white;
-  box-shadow: 5px 5px grey;
-  padding: 2%;
-  border-radius: 10px;
-  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  flex-direction: column;
+  row-gap: 0vh;
+  align-items: center;
+  text-align: center;
+  color: lightpink;
+}
+#contact .send-mail a .mail-icon {
+  font-size: 100px;
 }
 #contact .send-mail a:active {
   box-shadow: none;
@@ -376,13 +393,13 @@ nav .nav-links a {
   row-gap: 0vh;
   align-items: center;
   text-align: center;
-  color: pink;
+  color: lightpink;
 }
 #contact .links a:hover {
   scale: 1.1;
 }
-#contact .links i {
-  font-size: 10vh;
+#contact .links .contact-icon {
+  font-size: 50px;
 }
 
 @media (max-width: 1000px) {
@@ -397,7 +414,7 @@ nav .nav-links a {
     row-gap: 3vh;
   }
   #contact .send-mail p {
-    font-size: 4vw;
+    font-size: 16px;
   }
   #contact .send-mail a {
     font-size: 4vw;
@@ -412,7 +429,6 @@ nav .nav-links a {
 }
 
 body {
-  /* 方眼紙模様に必須のスタイル */
   background-image: linear-gradient(0deg, transparent calc(100% - 1px), white calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), white calc(100% - 1px));
   background-size: 40px 40px;
   background-repeat: repeat;
@@ -421,17 +437,27 @@ body {
   background-attachment: fixed;
 }
 
+h1 {
+  font-size: 50px;
+}
+
 .main-contents {
   display: flex;
   flex-direction: column;
   row-gap: 0vh;
-  align-items: center;
-  background-color: rgba(0, 0, 85, 0.8);
+  background-color: rgba(0, 0, 85, 0.9);
 }
 
-.content-line {
-  height: 20vh;
+.content-space {
+  height: 10vh;
   width: 0;
   margin: 3vh;
-  border: 1px solid white;
+}
+
+footer {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1%;
 }

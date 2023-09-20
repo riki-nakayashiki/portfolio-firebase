@@ -6,7 +6,7 @@
     color: $fontColor;
 
     .my-name-bg {
-        background-image: url('/src/assets/Logo\ copy.png');
+        background-image: url('/src/assets/Logo.png');
         // background-size: contain;
         background-position: center;
         background-repeat: repeat;
@@ -21,7 +21,7 @@
             background-color: rgba($color: black, $alpha: .9);
             border-top: 1px solid darkgray;
             border-bottom: 1px solid darkgray;
-            
+
             #txt-rotate>.wrap {
                 font-weight: 600;
                 color: $fontColorSecond;
@@ -72,8 +72,10 @@
 
 @media (max-width: $mobileScreen) {
     #about {
+        text-align: center;
+
         figure {
-            @include MakeColumn;
+            @include MakeColumn(3vh);
 
             img {
                 width: 50vw;

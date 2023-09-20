@@ -15,13 +15,7 @@
 
 body {
     // filter: invert(100%);
-    // background-image: url('/src/assets/Logo\ copy.png');
-    // background-size: cover;
-    // background-position: center;
-    // background-repeat: no-repeat;
-    // background-attachment: fixed;
 
-    /* 方眼紙模様に必須のスタイル */
     background-image: linear-gradient(0deg, transparent calc(100% - 1px), white calc(100% - 1px)),
         linear-gradient(90deg, transparent calc(100% - 1px), white calc(100% - 1px));
     background-size: 40px 40px;
@@ -29,21 +23,28 @@ body {
     background-position: center center;
     background-color: black;
     background-attachment: fixed;
+}
 
+h1 {
+    font-size: 50px
 }
 
 .main-contents {
     @include MakeColumn();
-    align-items: center;
-    background-color: rgba($color: $backgroundColor, $alpha: .8);
-    // padding-top: 10vh;
-    // padding-left: 10vw;
-    // padding-right: 10vw;
+    // align-items: center;
+    background-color: rgba($color: $backgroundColor, $alpha: .9);
 }
 
-.content-line {
-    height: 20vh;
+.content-space {
+    height: 10vh;
     width: 0;
     margin: 3vh;
-    border: 1px solid $fontColor;
+    // border: 1px solid $fontColor;
+}
+
+footer {
+    color: $fontColor;
+    @include MakeCenter;
+    padding: 1%;
+    // background-color: rgba($color: $fontColor, $alpha: .7);
 }

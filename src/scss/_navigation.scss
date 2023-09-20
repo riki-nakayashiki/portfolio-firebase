@@ -23,21 +23,25 @@ nav {
         color: $fontColor;
         font-size: 20px;
 
+
+        .title-name {
+            font-family: 'Times New Roman', Times, serif;
+            font-weight: 600;
+        }
+
+        span {
+            font-family: 'Times New Roman', Times, serif;
+            color: $fontColorSecond
+        }
+    }
+
+    .nav-name-scrolled {
         animation: rotateY 5s linear infinite;
 
         @keyframes rotateY {
             100% {
                 transform: rotateY(360deg);
             }
-        }
-
-        h1 {
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        span {
-            font-family: 'Times New Roman', Times, serif;
-            color: $fontColorSecond
         }
     }
 
@@ -65,8 +69,6 @@ nav {
         }
 
         a:hover {
-            // border-bottom: 1px solid $fontColor;
-            // border-top: 1px solid $fontColor;
             scale: 1.2;
             color: $fontColorSecond
         }
@@ -86,6 +88,9 @@ nav {
 
 }
 
+.non-animate{
+    display: none;
+}
 .animate {
     color: rgba($color: $fontColorSecond, $alpha: .3);
     font-size: 5vh;

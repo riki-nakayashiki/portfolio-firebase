@@ -8,36 +8,37 @@ export default function NavComponent() {
 
   useEffect(() => {
     document.addEventListener("scroll", () => {
-      setIsScrolled(window.pageYOffset > 0);
+      setIsScrolled(window.scrollY > 0);
     });
   }, []);
-
-  // document.addEventListener("scroll", () => {
-  //   console.log(window.pageYOffset > 100);
-  // });
 
   return (
     <section>
       <nav className={isScrolled ? "nav-scrolled" : ""}>
-        <a href="#" className="nav-name">
-          <h1>
+        {/* <a href="#" className="nav-name"> */}
+        <a
+          href="#"
+          className={isScrolled ? "nav-name-scrolled nav-name" : "nav-name"}
+        >
+          <p className="title-name">
             <span>Riki</span>
             <br /> Nakayashiki
-          </h1>
+          </p>
         </a>
-        <TbShip className="animate" />
+        {/* <TbShip className="animate" /> */}
+        <TbShip className={isScrolled ? "animate" : "non-animate"} />
         <ul class="bigger-menu">
           <li>
-            <a href="#about-line">About</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#projects-line">Projects</a>
+            <a href="#projects-space">Projects</a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
+            <a href="#skills-space">Skills</a>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact-space">Contact</a>
           </li>
         </ul>
         <section class="nav-links">
@@ -45,7 +46,7 @@ export default function NavComponent() {
             <MdEmail />
           </a>
           <a
-            href="https://www.linkedin.com/in/riki-nakayashiki-92193b262/"
+            href="https://www.linkedin.com/in/riki-nakayashiki/"
             target="_blank"
             rel="noreferrer"
           >
@@ -59,7 +60,7 @@ export default function NavComponent() {
             <ImGithub />
           </a>
           <a
-            href="https://drive.google.com/file/d/1rTlhGE22EVmRtgYfpiIsRmwIz5HJohij/view?usp=sharing"
+            href="https://drive.google.com/file/d/11wpjBKyiXnC0jIBzvDCHhLm57grbm8zR/view?usp=sharing"
             target="_blank"
             rel="noreferrer"
           >
@@ -67,27 +68,24 @@ export default function NavComponent() {
           </a>
         </section>
       </nav>
-      <details class="smaller-menu">
-        {/* <summary class="fa-solid fa-bars"></summary> */}
+      {/* <details class="smaller-menu">
+        <summary class="fa-solid fa-bars"></summary>
         <summary></summary>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#about">About</a>
           </li>
           <li>
-            <a href="#about-line">About</a>
+            <a href="#projects-space">Projects</a>
           </li>
           <li>
-            <a href="#projects-line">Projects</a>
+            <a href="#skills-space">Skills</a>
           </li>
           <li>
-            <a href="#skills">Skills</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
+            <a href="#contact-space">Contact</a>
           </li>
         </ul>
-      </details>
+      </details> */}
     </section>
   );
 }

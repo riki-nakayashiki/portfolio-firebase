@@ -12,17 +12,14 @@ export default function SkillsComponent() {
           </section>
           <section class="skill-elements">
             <aside>
-              {/* <FaHtml5 className="skill-icon" /> */}
               <i class="devicon-html5-plain colored"></i>
               <p>HTML</p>
             </aside>
             <aside>
-              {/* <FaCss3Alt className="skill-icon" /> */}
               <i class="devicon-css3-plain colored"></i>
               <p>CSS</p>
             </aside>
             <aside>
-              {/* <FaSass /> */}
               <i class="devicon-sass-original colored"></i>
               <p>SASS, SCSS</p>
             </aside>
@@ -35,12 +32,12 @@ export default function SkillsComponent() {
               <p>JavaScript</p>
             </aside>
             <aside>
-              <i class="devicon-vuejs-plain colored"></i>
-              <p>Vue.js</p>
-            </aside>
-            <aside>
               <i class="devicon-react-original colored"></i>
               <p>React.js</p>
+            </aside>
+            <aside>
+              <i class="devicon-vuejs-plain colored"></i>
+              <p>Vue.js</p>
             </aside>
             <aside>
               <i class="devicon-jquery-plain colored"></i>
