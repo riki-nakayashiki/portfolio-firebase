@@ -1,0 +1,44 @@
+    .popup-menu-container {
+        @include MakeCenter();
+        color: $fontColor;
+        font-size: 5vh;
+
+        position: relative;
+
+        .popup-menu {
+            @include MakeColumn(5vh);
+            align-items: center;
+            // background-color: black;
+            background-color: rgba($color: rgba(58, 62, 133, 0.087), $alpha: .95);
+            position: absolute;
+            z-index: 2;
+            width: 30vw;
+            height: 100vh;
+
+            top: 0vh;
+            right: -50vw;
+
+            // transform: scale(0);
+            // transform-origin: top right;
+            // transition: transform .5s;
+            transition: 1s;
+
+            &.shown {
+                // transform: scale(1);
+                right: -3vw;
+            }
+
+            ul {
+                // border: 1px solid red;
+                // width: 100%;
+                @include MakeColumn(5vh);
+                align-items: start;
+            }
+        }
+    }
+
+    @media (min-width: $tabletScreen) {
+        .popup-menu-container {
+            display: none;
+        }
+    }

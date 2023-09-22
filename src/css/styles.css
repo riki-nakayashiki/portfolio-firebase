@@ -8,10 +8,10 @@ nav {
   transition: 1s;
   position: fixed;
   z-index: 3;
-  width: 94%;
+  width: 94vw;
   height: 10vh;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 3vw;
+  padding-right: 3vw;
   display: flex;
   flex-direction: row;
   column-gap: 0vh;
@@ -80,7 +80,7 @@ nav .nav-links {
 nav .nav-links a {
   color: lightpink;
   text-decoration: none;
-  font-size: 4vh;
+  font-size: 3vh;
 }
 
 .non-animate {
@@ -110,33 +110,11 @@ nav .nav-links a {
   }
 }
 
-.smaller-menu {
-  display: none;
-}
-
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   .bigger-menu {
     display: none;
   }
-  .smaller-menu {
-    display: flex;
-    font-size: 2.5vh;
-    background-color: #000055;
-    padding-top: 10vh;
-    text-align: center;
-  }
-  .smaller-menu summary {
-    height: 4vh;
-    color: white;
-  }
-  .smaller-menu a {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1%;
-    font-size: 20px;
-    font-weight: 600;
-    text-decoration: none;
+  .nav-links .nav-link-icon {
     color: white;
   }
 }
@@ -283,10 +261,10 @@ nav .nav-links a {
   position: absolute;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   #projects figure {
-    height: 50vh;
-    width: 90vw;
+    height: 70vh;
+    width: 85vw;
   }
   #projects figure figcaption {
     height: 100%;
@@ -342,6 +320,11 @@ nav .nav-links a {
   color: white;
 }
 
+@media (max-width: 767px) {
+  #skills i {
+    font-size: 5vh;
+  }
+}
 #contact {
   display: flex;
   flex-direction: column;
@@ -402,7 +385,7 @@ nav .nav-links a {
   font-size: 50px;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 767px) {
   #contact {
     display: flex;
     flex-direction: column;
@@ -419,6 +402,43 @@ nav .nav-links a {
   #contact .send-mail a {
     font-size: 4vw;
     box-shadow: 3px 3px grey;
+  }
+}
+.popup-menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 5vh;
+  position: relative;
+}
+.popup-menu-container .popup-menu {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  align-items: center;
+  background-color: rgba(58, 62, 133, 0.95);
+  position: absolute;
+  z-index: 2;
+  width: 30vw;
+  height: 100vh;
+  top: 0vh;
+  right: -50vw;
+  transition: 1s;
+}
+.popup-menu-container .popup-menu.shown {
+  right: -3vw;
+}
+.popup-menu-container .popup-menu ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5vh;
+  align-items: start;
+}
+
+@media (min-width: 767px) {
+  .popup-menu-container {
+    display: none;
   }
 }
 * {

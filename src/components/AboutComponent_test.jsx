@@ -1,13 +1,38 @@
 import profilepic from "../assets/profilepic.png";
+import { useEffect, useState } from "react";
+
+let time = 0;
+// setInterval(() => {
+//   time++;
+// }, 1000);
 
 export default function AboutComponent() {
+  const [textRotate, setTextRotate] = useState(0);
+  
+  setInterval(() => {
+    // time++;
+    setTextRotate(time);
+    console.log(time);
+    // console.log(time);
+  }, 1000);
+  // useEffect(() => {
+  //   // document.addEventListener("load", () => {
+  //   //   var elements = document.getElementById("txt-rotate");
+  //   //   var toRotate = '[" Riki.", "a software engineer."]';
+  //   //   var period = 1000;
+  //   //   if (toRotate) {
+  //   //     new TxtRotate(elements, JSON.parse(toRotate), period);
+  //   //   }
+  //   // });
+  // });
+
   return (
     <section className="contents" id="about">
       <section className="my-name-bg">
         <section className="my-name">
           <h1>Hi there, I'm</h1>
           <p>
-            <span id="txt-rotate"></span>
+            <span id="txt-rotate">{textRotate}</span>
           </p>
         </section>
       </section>
@@ -70,11 +95,10 @@ TxtRotate.prototype.tick = function () {
 };
 
 // window.onload = function () {
-window.addEventListener("load", function () {
-  var elements = document.getElementById("txt-rotate");
-  var toRotate = '[" Riki.", "a software engineer."]';
-  var period = 1000;
-  if (toRotate) {
-    new TxtRotate(elements, JSON.parse(toRotate), period);
-  }
-});
+//   var elements = document.getElementById("txt-rotate");
+//   var toRotate = '[" Riki.", "a software engineer."]';
+//   var period = 1000;
+//   if (toRotate) {
+//     new TxtRotate(elements, JSON.parse(toRotate), period);
+//   }
+// };

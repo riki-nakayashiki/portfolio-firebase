@@ -6,8 +6,6 @@
     h1 {
         color: $fontColor;
         text-align: center;
-        // font-size: 50px;
-        // border: 1px solid red;
     }
 
     .gallery {
@@ -80,8 +78,8 @@
 @media (max-width: $tabletScreen) {
     #projects {
         figure {
-            height: 50vh;
-            width: 90vw;
+            height: 70vh;
+            width: 85vw;
 
             figcaption {
                 height: 100%;

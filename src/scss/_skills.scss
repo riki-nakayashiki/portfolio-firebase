@@ -42,23 +42,12 @@
         font-size: 9vh;
         color: $fontColor;
     }
-
-    // fieldset {
-    //     padding: 3%;
-    //     @include MakeRow(2vw);
-    // }
-
-    // legend {
-    //     font-size: 20px;
-    //     font-weight: 600
-    // }
 }
 
-// @media (max-width: $tabletScreen) {
-//     #skills {
-//         fieldset {
-//             row-gap: 2vw;
-//             flex-wrap: wrap;
-//         }
-//     }
-// }
+@media (max-width: $tabletScreen) {
+    #skills {
+        i{
+            font-size: 5vh;
+        }
+    }
+}

@@ -7,9 +7,9 @@ import ecommerce from "../assets/e-commerce-app.png";
 
 export default function ProjectsComponent() {
   return (
-    <section class="contents" id="projects">
+    <section className="contents" id="projects">
       <h1>Projects</h1>
-      <section class="gallery">
+      <section className="gallery">
         <figure>
           <img src={internal} alt="internal" />
           <figcaption>

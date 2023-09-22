@@ -3,7 +3,7 @@ import { MdEmail } from "react-icons/md";
 
 export default function ContactComponent() {
   return (
-    <section class="contents" id="contact">
+    <section className="contents" id="contact">
       <h1>Contact</h1>
       <section className="send-mail">
         <p>
