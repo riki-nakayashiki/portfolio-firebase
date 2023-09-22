@@ -71,24 +71,6 @@ export default function NavComponent() {
           </a>
         </section>
         <PopupComponent />
-        {/* <details class="smaller-menu">
-          <summary class="fa-solid fa-bars"></summary>
-          <summary></summary>
-          <ul>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#projects-space">Projects</a>
-            </li>
-            <li>
-              <a href="#skills-space">Skills</a>
-            </li>
-            <li>
-              <a href="#contact-space">Contact</a>
-            </li>
-          </ul>
-        </details> */}
       </nav>
     </section>
   );
