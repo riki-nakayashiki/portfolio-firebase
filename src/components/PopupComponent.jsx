@@ -22,9 +22,6 @@ export default function PopupComponent() {
             <a href="#">Top</a>
           </li>
           <li>
-            <a href="#about">About</a>
-          </li>
-          <li>
             <a href="#projects-space">Projects</a>
           </li>
           <li>

@@ -32,7 +32,7 @@ export default function NavComponent() {
         <TbShip className={isScrolled ? "animate" : "non-animate"} />
         <ul className="bigger-menu">
           <li>
-            <a href="#about">About</a>
+            <a href="#about">Home</a>
           </li>
           <li>
             <a href="#projects-space">Projects</a>

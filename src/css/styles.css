@@ -195,6 +195,7 @@ nav .nav-links a {
 #projects h1 {
   color: white;
   text-align: center;
+  background: linear-gradient(to right, lightpink, transparent 80%);
 }
 #projects .gallery {
   display: flex;
@@ -204,23 +205,33 @@ nav .nav-links a {
   justify-content: center;
   flex-wrap: wrap;
 }
+#projects .pc-button {
+  height: 26px;
+  background-color: white;
+  background-image: url(../assets/browser_pc_button.svg);
+  background-position: center left 12px;
+  background-repeat: no-repeat;
+  border-radius: 9px 9px 0px 0px;
+}
+#projects .figure-wrap {
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: 0.6s;
+}
+#projects .figure-wrap:hover {
+  scale: 1.1;
+}
 #projects figure {
   display: flex;
   flex-direction: column;
   row-gap: 5vh;
   justify-content: center;
   align-items: center;
-  height: 60vh;
+  height: 50vh;
   width: 35vw;
   position: relative;
   overflow-y: hidden;
   background-color: rgba(255, 255, 255, 0.3);
-  border: 1px solid white;
-  border-radius: 10px;
-  transition: 0.6s;
-}
-#projects figure:hover {
-  scale: 1.1;
 }
 #projects figure figcaption {
   color: white;
@@ -236,6 +247,7 @@ nav .nav-links a {
   background-color: rgba(0, 0, 85, 0.7);
   z-index: 1;
   transition: 0.6s;
+  border-radius: 0px 0px 10px 10px;
 }
 #projects figure:hover figcaption {
   height: 100%;
@@ -263,11 +275,14 @@ nav .nav-links a {
 
 @media (max-width: 767px) {
   #projects figure {
-    height: 70vh;
-    width: 85vw;
+    height: 75vh;
+    width: 78vw;
   }
   #projects figure figcaption {
     height: 100%;
+  }
+  #projects .project-small {
+    height: 50vh;
   }
 }
 #skills {
@@ -277,27 +292,25 @@ nav .nav-links a {
   align-items: center;
   color: white;
 }
+#skills H1 {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to left, lightpink, transparent 80%);
+}
 #skills > section {
   width: 80%;
-  display: flex;
-  flex-direction: column;
-  row-gap: 3vw;
+}
+#skills h3 {
+  background: linear-gradient(transparent 70%, lightpink 70%);
 }
 #skills .skill-category {
   display: flex;
   flex-direction: column;
   row-gap: 3vh;
-}
-#skills .skill-category .skill-border {
-  display: flex;
-  flex-direction: row;
-  column-gap: 2vw;
   align-items: center;
-}
-#skills .skill-category .skill-border div {
-  width: 80vw;
-  height: 50%;
-  border-bottom: 1px solid grey;
+  padding: 10px;
+  border: 3px white;
+  border-style: solid solid none;
 }
 #skills .skill-category .skill-elements {
   display: flex;
@@ -306,6 +319,9 @@ nav .nav-links a {
   gap: 2vw;
   justify-content: center;
   flex-wrap: wrap;
+}
+#skills .skill-category:last-child {
+  border-style: solid;
 }
 #skills aside {
   width: 11vh;
@@ -331,6 +347,11 @@ nav .nav-links a {
   row-gap: 8vh;
   align-items: center;
   color: white;
+}
+#contact h1 {
+  width: 100%;
+  text-align: center;
+  background: linear-gradient(to right, lightpink, transparent 80%);
 }
 #contact .send-mail {
   display: flex;

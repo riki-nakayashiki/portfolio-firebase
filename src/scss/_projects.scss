@@ -6,6 +6,7 @@
     h1 {
         color: $fontColor;
         text-align: center;
+        background: linear-gradient(to right, $fontColorSecond, transparent 80%);
     }
 
     .gallery {
@@ -15,15 +16,16 @@
         flex-wrap: wrap;
     }
 
-    figure {
-        @include MakeColumn(5vh);
-        justify-content: center;
-        align-items: center;
-        height: 60vh;
-        width: 35vw;
-        position: relative;
-        overflow-y: hidden;
-        background-color: rgba($color: $fontColor, $alpha: .3);
+    .pc-button {
+        height: 26px;
+        background-color: $fontColor;
+        background-image: url(../assets/browser_pc_button.svg);
+        background-position: center left 12px;
+        background-repeat: no-repeat;
+        border-radius: 9px 9px 0px 0px;
+    }
+
+    .figure-wrap {
         border: 1px solid $fontColor;
         border-radius: 10px;
         transition: .6s;
@@ -31,6 +33,17 @@
         &:hover {
             scale: 1.1;
         }
+    }
+
+    figure {
+        @include MakeColumn(5vh);
+        justify-content: center;
+        align-items: center;
+        height: 50vh;
+        width: 35vw;
+        position: relative;
+        overflow-y: hidden;
+        background-color: rgba($color: $fontColor, $alpha: .3);
 
         figcaption {
             color: $fontColor;
@@ -44,6 +57,7 @@
             background-color: rgba($color: $backgroundColor, $alpha: 0.7);
             z-index: 1;
             transition: .6s;
+            border-radius: 0px 0px 10px 10px;
         }
 
         &:hover figcaption {
@@ -62,7 +76,6 @@
             li {
                 list-style: square inside;
                 text-align: left;
-                // line-height: 1.5;
             }
         }
     }
@@ -78,20 +91,16 @@
 @media (max-width: $tabletScreen) {
     #projects {
         figure {
-            height: 70vh;
-            width: 85vw;
+            height: 75vh;
+            width: 78vw;
 
             figcaption {
                 height: 100%;
             }
         }
+
+        .project-small {
+            height: 50vh;
+        }
     }
 }
-
-// @media (max-width: $mobileScreen) {
-//     #projects {
-//         figure {
-//             height: 50vh;
-//         }
-//     }
-// }

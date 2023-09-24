@@ -4,24 +4,28 @@
     align-items: center;
     color: $fontColor;
 
+    H1 {
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(to left, $fontColorSecond, transparent 80%);
+    }
+
     >section {
         width: 80%;
-        @include MakeColumn(3vw);
+    }
+
+    h3 {
+        background: linear-gradient(transparent 70%, $fontColorSecond 70%);
+        // background: linear-gradient(to right, transparent , $fontColorSecond );
     }
 
     .skill-category {
         @include MakeColumn(3vh);
+        align-items: center;
+        padding: 10px;
 
-        .skill-border {
-            @include MakeRow(2vw);
-            align-items: center;
-
-            div {
-                width: 80vw;
-                height: 50%;
-                border-bottom: 1px solid grey;
-            }
-        }
+        border: 3px $fontColor;
+        border-style: solid solid none;
 
         .skill-elements {
             @include MakeRow();
@@ -29,6 +33,10 @@
             justify-content: center;
             flex-wrap: wrap;
         }
+    }
+
+    .skill-category:last-child {
+        border-style: solid;
     }
 
     aside {
@@ -46,8 +54,62 @@
 
 @media (max-width: $tabletScreen) {
     #skills {
-        i{
+        i {
             font-size: 5vh;
         }
     }
 }
+
+// // Skills
+// #skills {
+//     @include MakeColumn(5vh);
+//     align-items: center;
+//     color: $fontColor;
+
+//     >section {
+//         width: 80%;
+//         @include MakeColumn(3vw);
+//     }
+
+//     .skill-category {
+//         @include MakeColumn(3vh);
+
+//         .skill-border {
+//             @include MakeRow(2vw);
+//             align-items: center;
+
+//             div {
+//                 width: 80vw;
+//                 height: 50%;
+//                 border-bottom: 1px solid grey;
+//             }
+//         }
+
+//         .skill-elements {
+//             @include MakeRow();
+//             gap: 2vw;
+//             justify-content: center;
+//             flex-wrap: wrap;
+//         }
+//     }
+
+//     aside {
+//         width: 11vh;
+//         @include MakeColumn;
+//         align-items: center;
+//         text-align: center;
+//     }
+
+//     i {
+//         font-size: 9vh;
+//         color: $fontColor;
+//     }
+// }
+
+// @media (max-width: $tabletScreen) {
+//     #skills {
+//         i{
+//             font-size: 5vh;
+//         }
+//     }
+// }

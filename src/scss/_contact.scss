@@ -4,6 +4,12 @@
     align-items: center;
     color: $fontColor;
 
+    h1 {
+        width: 100%;
+        text-align: center;
+        background: linear-gradient(to right, $fontColorSecond, transparent 80%);
+    }
+
     .send-mail {
         @include MakeColumn(5vh);
         align-items: center;
@@ -13,19 +19,9 @@
             text-align: center;
             font-weight: 600;
             font-size: 20px;
-            // line-height: 1.5;
         }
 
         a {
-            // text-decoration: none;
-            // font-size: 2vw;
-            // color: black;
-            // background-color: white;
-            // box-shadow: 5px 5px grey;
-            // padding: 2%;
-            // border-radius: 10px;
-            // font-family: 'Times New Roman', Times, serif;
-
             text-decoration: none;
             @include MakeColumn;
             align-items: center;
