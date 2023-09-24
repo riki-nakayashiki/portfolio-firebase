@@ -1,7 +1,8 @@
 // NAV 
 .nav-scrolled {
     transition: 1s;
-    background-color: rgba($color: rgba(58, 62, 133, 0.087), $alpha: .95);
+    background-color: rgba($color: $navbgColor, $alpha: .7);
+    backdrop-filter: blur(12px);
 }
 
 nav {

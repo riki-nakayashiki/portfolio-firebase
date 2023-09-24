@@ -1,13 +1,10 @@
 // About
 #about {
-    // height: 50vh;
-    // padding-top: 30vh;
     @include MakeColumn(5vh);
     color: $fontColor;
 
     .my-name-bg {
         background-image: url('/src/assets/Logo.png');
-        // background-size: contain;
         background-position: center;
         background-repeat: repeat;
         background-attachment: fixed;
@@ -27,16 +24,6 @@
                 color: $fontColorSecond;
                 border-right: 0.08em solid #666
             }
-
-            // /* 方眼紙模様に必須のスタイル */
-            // background-image: linear-gradient(0deg, transparent calc(100% - 1px), grey calc(100% - 1px)),
-            //     linear-gradient(90deg, transparent calc(100% - 1px), grey calc(100% - 1px));
-            // background-size: 20px 20px;
-            // background-repeat: repeat;
-            // background-position: center center;
-
-            /* 以下任意のスタイル */
-            // padding: 20px;
         }
     }
 
@@ -46,8 +33,8 @@
         padding-right: 10vw;
         @include MakeCenter;
         gap: 5vh;
-        font-size: 20px;
         font-weight: 600;
+        line-height: 1.5;
     }
 
     img {
@@ -63,10 +50,6 @@
 
     figcaption {
         @include MakeColumn(5vh);
-
-        // h1 {
-        //     font-size: 50px;
-        // }
     }
 }
 
@@ -76,6 +59,7 @@
 
         figure {
             @include MakeColumn(3vh);
+            font-size: 14px;
 
             img {
                 width: 50vw;

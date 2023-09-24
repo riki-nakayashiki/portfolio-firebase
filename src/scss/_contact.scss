@@ -33,10 +33,10 @@
             }
         }
 
-        a:active {
-            box-shadow: none;
-            transform: translateY(5px);
-        }
+        // a:active {
+        //     box-shadow: none;
+        //     transform: translateY(5px);
+        // }
     }
 
     span {
@@ -52,7 +52,7 @@
             @include MakeColumn;
             align-items: center;
             text-align: center;
-            color: $fontColorSecond;
+            color: $fontColor;
 
             &:hover {
                 scale: 1.1;
@@ -76,10 +76,10 @@
                 font-size: 16px;
             }
 
-            a {
-                font-size: 4vw;
-                box-shadow: 3px 3px grey;
-            }
+            // a {
+            //     font-size: 4vw;
+            //     box-shadow: 3px 3px grey;
+            // }
         }
     }
 }

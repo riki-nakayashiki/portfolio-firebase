@@ -1,7 +1,7 @@
-@charset "UTF-8";
 .nav-scrolled {
   transition: 1s;
-  background-color: rgba(58, 62, 133, 0.95);
+  background-color: rgba(105, 105, 105, 0.7);
+  backdrop-filter: blur(12px);
 }
 
 nav {
@@ -141,7 +141,6 @@ nav .nav-links a {
   background-color: rgba(0, 0, 0, 0.9);
   border-top: 1px solid darkgray;
   border-bottom: 1px solid darkgray;
-  /* 以下任意のスタイル */
 }
 #about .my-name-bg .my-name #txt-rotate > .wrap {
   font-weight: 600;
@@ -155,8 +154,8 @@ nav .nav-links a {
   justify-content: center;
   align-items: center;
   gap: 5vh;
-  font-size: 20px;
   font-weight: 600;
+  line-height: 1.5;
 }
 #about img {
   width: 15vw;
@@ -181,6 +180,7 @@ nav .nav-links a {
     display: flex;
     flex-direction: column;
     row-gap: 3vh;
+    font-size: 14px;
   }
   #about figure img {
     width: 50vw;
@@ -244,7 +244,7 @@ nav .nav-links a {
   align-items: center;
   width: 100%;
   height: 0%;
-  background-color: rgba(0, 0, 85, 0.7);
+  background-color: rgba(0, 0, 45, 0.7);
   z-index: 1;
   transition: 0.6s;
   border-radius: 0px 0px 10px 10px;
@@ -298,7 +298,7 @@ nav .nav-links a {
   background: linear-gradient(to left, lightpink, transparent 80%);
 }
 #skills > section {
-  width: 80%;
+  width: 70%;
 }
 #skills h3 {
   background: linear-gradient(transparent 70%, lightpink 70%);
@@ -316,7 +316,7 @@ nav .nav-links a {
   display: flex;
   flex-direction: row;
   column-gap: 0vh;
-  gap: 2vw;
+  gap: 1vw;
   justify-content: center;
   flex-wrap: wrap;
 }
@@ -332,7 +332,7 @@ nav .nav-links a {
   text-align: center;
 }
 #skills i {
-  font-size: 9vh;
+  font-size: 5vh;
   color: white;
 }
 
@@ -377,10 +377,6 @@ nav .nav-links a {
 #contact .send-mail a .mail-icon {
   font-size: 100px;
 }
-#contact .send-mail a:active {
-  box-shadow: none;
-  transform: translateY(5px);
-}
 #contact span {
   width: 40%;
   border: 1px solid grey;
@@ -397,7 +393,7 @@ nav .nav-links a {
   row-gap: 0vh;
   align-items: center;
   text-align: center;
-  color: lightpink;
+  color: white;
 }
 #contact .links a:hover {
   scale: 1.1;
@@ -420,10 +416,6 @@ nav .nav-links a {
   #contact .send-mail p {
     font-size: 16px;
   }
-  #contact .send-mail a {
-    font-size: 4vw;
-    box-shadow: 3px 3px grey;
-  }
 }
 .popup-menu-container {
   display: flex;
@@ -438,7 +430,7 @@ nav .nav-links a {
   flex-direction: column;
   row-gap: 5vh;
   align-items: center;
-  background-color: rgba(58, 62, 133, 0.95);
+  background-color: rgba(0, 0, 45, 0.8);
   position: absolute;
   z-index: 2;
   width: 30vw;
@@ -471,22 +463,22 @@ nav .nav-links a {
 
 body {
   background-image: linear-gradient(0deg, transparent calc(100% - 1px), white calc(100% - 1px)), linear-gradient(90deg, transparent calc(100% - 1px), white calc(100% - 1px));
-  background-size: 40px 40px;
+  background-size: 20px 20px;
   background-repeat: repeat;
   background-position: center center;
-  background-color: black;
+  background-color: #00002d;
   background-attachment: fixed;
 }
 
 h1 {
-  font-size: 50px;
+  font-size: 30px;
 }
 
 .main-contents {
   display: flex;
   flex-direction: column;
   row-gap: 0vh;
-  background-color: rgba(0, 0, 85, 0.9);
+  background-color: rgba(0, 0, 45, 0.9);
 }
 
 .content-space {
